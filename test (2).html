@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyLo - Home Loan</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #00a995;
+            color: white;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background: #009f91;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            color: #d4fff8;
+        }
+
+        .apply-btn {
+            background: #008f80;
+            padding: 15px 20px;
+            border-radius: 3px;
+        }
+
+        /* Main Section */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 8%;
+            gap: 50px;
+            background: linear-gradient(120deg, #00a995, #008f80);
+        }
+
+        .hero-content {
+            max-width: 500px;
+        }
+
+        .hero-content h1 {
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 25px;
+        }
+
+        .line {
+            width: 80px;
+            height: 3px;
+            background: white;
+            margin-bottom: 25px;
+        }
+
+        .hero-content p {
+            font-size: 19px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #e9fffc;
+        }
+
+        .service-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+        }
+
+        .service-btn:hover {
+            background: white;
+            color: #009f91;
+        }
+
+        /* Loan Form */
+        .loan-box {
+            background: white;
+            color: #222;
+            width: 380px;
+            padding: 35px 30px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .loan-box h2 {
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .loan-box .subtitle {
+            text-align: center;
+            color: #777;
+            font-size: 13px;
+            margin-bottom: 35px;
+        }
+
+        label {
+            display: block;
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+            color: #444;
+        }
+
+        .payment {
+            font-size: 13px;
+            color: #666;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+
+        .payment span {
+            color: #009f91;
+            font-weight: bold;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: #009f91;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .submit-btn:hover {
+            background: #007d71;
+        }
+
+        .note {
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #777;
+            margin-top: 20px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 20px;
+
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                flex-direction: column;
+                padding: 40px 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 38px;
+            }
+
+            .loan-box {
+                width: 100%;
+                max-width: 380px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">EasyLo.</div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#loan" class="apply-btn">Apply For Loan</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+
+        <div class="hero-content">
+            <h1>The simple<br>online home<br>loan.</h1>
+
+            <div class="line"></div>
+
+            <p>
+                Financial uncertainty is hard on employees,
+                and causes even more stress.
+                We make home loans simple and convenient.
+            </p>
+
+            <a href="#services" class="service-btn">OUR SERVICES</a>
+        </div>
+
+        <!-- Loan Application Form -->
+        <div class="loan-box" id="loan">
+
+            <h2>How much you want?</h2>
+
+            <p class="subtitle">
+                We provide online instant cash loans.
+            </p>
+
+            <form id="loanForm">
+
+                <label for="amount">AMOUNT YOU WANT</label>
+
+                <select id="amount" required>
+                    <option value="">Select Amount</option>
+                    <option value="50000">₹50,000</option>
+                    <option value="100000">₹1,00,000</option>
+                    <option value="200000">₹2,00,000</option>
+                    <option value="500000">₹5,00,000</option>
+                    <option value="1000000">₹10,00,000</option>
+                </select>
+
+                <label for="months">MONTHS</label>
+
+                <select id="months" required>
+                    <option value="">Select Months</option>
+                    <option value="6">6 Months</option>
+                    <option value="12">12 Months</option>
+                    <option value="24">24 Months</option>
+                    <option value="36">36 Months</option>
+                    <option value="60">60 Months</option>
+                </select>
+
+                <p class="payment">
+                    Estimated monthly payment:
+                    <span id="payment">₹0</span>
+                </p>
+
+                <button type="submit" class="submit-btn">
+                    APPLY NOW
+                </button>
+
+            </form>
+
+            <p class="note">
+                Example rate: 6.9% APR.<br>
+                This is a demo website, not a real loan service.
+            </p>
+
+        </div>
+
+    </section>
+
+    <script>
+        const amount = document.getElementById("amount");
+        const months = document.getElementById("months");
+        const payment = document.getElementById("payment");
+
+        function calculatePayment() {
+            const principal = Number(amount.value);
+            const duration = Number(months.value);
+
+            if (principal > 0 && duration > 0) {
+                const monthlyRate = 0.069 / 12;
+
+                const emi = principal * monthlyRate *
+                    Math.pow(1 + monthlyRate, duration) /
+                    (Math.pow(1 + monthlyRate, duration) - 1);
+
+                payment.textContent = "₹" +
+                    Math.round(emi).toLocaleString("en-IN");
+            } else {
+                payment.textContent = "₹0";
+            }
+        }
+
+        amount.addEventListener("change", calculatePayment);
+        months.addEventListener("change", calculatePayment);
+
+        document.getElementById("loanForm")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                if (!amount.value || !months.value) {
+                    alert("Please select the loan amount and duration.");
+                    return;
+                }
+
+                alert(
+                    "Demo only! Loan amount: ₹" +
+                    Number(amount.value).toLocaleString("en-IN") +
+                    "\\nDuration: " + months.value + " months"
+                );
+            });
+    </script>
+
+</body>
+</html>
