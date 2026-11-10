@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conditional Statements</title>
+</head>
+<body>
+
+    <h1>Hello</h1>
+
+    <script>
+
+        // Relational Operators
+        // >, <, =, <=, >=, ==, !=, ===
+
+        let a = 10;
+        let b = 10;
+
+        console.log(a == b);
+        console.log(a === b);
+
+
+        // If Statement - Voting Eligibility
+
+        let std_age = 19;
+
+        if (std_age >= 18) {
+            console.log(std_age);
+            document.write('Eligible to vote ' + std_age);
+            alert('He is eligible to vote');
+        }
+
+
+        // If Statement - Equal Values
+
+        let x = 10;
+        let y = 10;
+
+        if (x == y) {
+            alert('Print the boolean value');
+        }
+
+
+        // Not Equal Operator
+
+        let name = 'john';
+        let name1 = 'doe';
+
+        if (name != name1) {
+            alert('Yes, statement is true');
+        }
+
+
+        // AND Operator
+
+        let course = 'javascript';
+        let fees = 45000;
+        let city = 'chennai';
+
+        if (course == 'javascript' && city == 'chennai') {
+            console.log('Both conditions are true');
+        }
+
+        // AND (&&) - Both conditions must be true
+        // OR (||) - Any one condition can be true
+
+
+        // Password Matching
+
+        let password = 'admin123';
+        let retype_password = 'admin123';
+
+        if (password === retype_password) {
+            alert('Eligible to login');
+        }
+
+
+        // Password Length
+
+        let password1 = 'admin.123';
+
+        if (password1.length > 8) {
+            alert('Statement true');
+        }
+
+
+        // Marks Condition
+
+        let marks1 = 33;
+
+        if (marks1 > 25 && marks1 <= 35) {
+            console.log('Just pass');
+        }
+
+
+        // Even or Odd Number
+
+        let no = 222;
+
+        if (no % 2 == 0) {
+            alert('Even number');
+        }
+        else {
+            alert('Odd number');
+        }
+
+
+        // Addition of Two Numbers
+
+        // let num1 = parseInt(prompt('Enter a number'));
+        // let num2 = parseInt(prompt('Enter another number'));
+
+        // let c = num1 + num2;
+
+        // alert(c);
+
+
+        // Greater Than Condition
+
+        // let num3 = parseInt(prompt('Enter value a'));
+        // let num4 = parseInt(prompt('Enter value b'));
+
+        // if (num3 > num4) {
+        //     alert('a is greater than b');
+        // }
+
+
+        // If - Else Statement
+
+        let temp = 32;
+
+        if (temp < 10) {
+            alert('Freeze');
+        }
+        else {
+            alert('Condition not satisfied');
+        }
+
+
+        // If - Else If - Else
+        // Grade System
+
+        let marks = 97;
+
+        if (marks >= 95 && marks <= 100) {
+            alert(marks + ' A+ grade');
+        }
+        else if (marks >= 80 && marks < 95) {
+            alert(marks + ' B grade');
+        }
+        else if (marks >= 70 && marks < 80) {
+            alert(marks + ' C grade');
+        }
+        else if (marks >= 0 && marks < 70) {
+            alert(marks + ' Fail');
+        }
+        else {
+            alert('Invalid marks');
+        }
+
+
+        // parseInt() Function
+
+        console.log(parseInt(3.0));
+        console.log(parseInt('30'));
+        console.log(parseInt('   30  '));
+        console.log(parseInt('im 30 years old'));
+
+    </script>
+
+</body>
+</html>
